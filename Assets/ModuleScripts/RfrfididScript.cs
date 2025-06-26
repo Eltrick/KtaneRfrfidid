@@ -103,7 +103,7 @@ public class RfrfididScript : ModuleScript
 
     private static string PrettifyArray(uint[] numbers, int byteLength = 2)
     {
-        return numbers.Select(x => Convert.ToString(x, 16).PadLeft(2, '0')).Join("");
+        return numbers.Select(x => Convert.ToString(x, 16).PadLeft(byteLength, '0')).Join("");
     }
 
     public static bool[] ParseByte(byte num)
